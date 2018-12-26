@@ -20,9 +20,9 @@ class LoginTest extends DuskTestCase
             $browser
                 ->visit(LoginPage::LOGIN_URL)
                 ->press('Login')
-                ->pause(100)
+                ->pause(200)
                 ->assertSee('The email field is required.')
-                ->assertSee('The password field is required.');
+                ->assertSee('The password field is required.')->pause(200);
         });
 
         $this->browse(function (Browser $browser) {
@@ -30,8 +30,8 @@ class LoginTest extends DuskTestCase
                 ->visit(LoginPage::LOGIN_URL)
                 ->type('email', LoginPage::USER_EMAIL)
                 ->press('Login')
-                ->pause(100)
-                ->assertSee('The password field is required.');
+                ->pause(200)
+                ->assertSee('The password field is required.')->pause(200);
         });
 
         $this->browse(function (Browser $browser) {
@@ -39,8 +39,8 @@ class LoginTest extends DuskTestCase
                 ->visit(LoginPage::LOGIN_URL)
                 ->type('password', LoginPage::USER_PASS)
                 ->press('Login')
-                ->pause(100)
-                ->assertSee('The email field is required.');
+                ->pause(200)
+                ->assertSee('The email field is required.')->pause(200);
         });
 
         $this->browse(function (Browser $browser) {
@@ -49,8 +49,8 @@ class LoginTest extends DuskTestCase
                 ->type('email', LoginPage::WRONG_USER_EMAIL)
                 ->type('password', LoginPage::WRONG_USER_PASS)
                 ->press('Login')
-                ->pause(100)
-                ->assertSee('These credentials do not match our records.');
+                ->pause(200)
+                ->assertSee('These credentials do not match our records.')->pause(200);
         });
 
 
@@ -72,7 +72,7 @@ class LoginTest extends DuskTestCase
                 ->waitForLocation(LoginPage::HOME_URL)
                 ->assertUrlIs(LoginPage::homeUrl())
                 ->assertSee(LoginPage::HOME_ASSERT_STRING_1)
-                ->assertSee(LoginPage::HOME_ASSERT_STRING_2);
+                ->assertSee(LoginPage::HOME_ASSERT_STRING_2)->pause(200);
         });
     }
 }

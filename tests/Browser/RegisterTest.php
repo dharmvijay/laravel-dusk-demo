@@ -20,10 +20,10 @@ class RegisterTest extends DuskTestCase
             $browser
                 ->visit(RegisterPage::REGISTER_URL)
                 ->press('Register')
-                ->pause(100)
+                ->pause(200)
                 ->assertSee('The name field is required.')
                 ->assertSee('The email field is required.')
-                ->assertSee('The password field is required.');
+                ->assertSee('The password field is required.')->pause(200);
         });
 
         $this->browse(function (Browser $browser) {
@@ -31,8 +31,8 @@ class RegisterTest extends DuskTestCase
                 ->visit(RegisterPage::REGISTER_URL)
                 ->type('email', RegisterPage::USER_EMAIL)
                 ->press('Register')
-                ->pause(100)
-                ->assertSee('The password field is required.');
+                ->pause(200)
+                ->assertSee('The password field is required.')->pause(200);
         });
 
         $this->browse(function (Browser $browser) {
@@ -40,8 +40,8 @@ class RegisterTest extends DuskTestCase
                 ->visit(RegisterPage::REGISTER_URL)
                 ->type('email', RegisterPage::USER_EMAIL)
                 ->press('Register')
-                ->pause(100)
-                ->assertSee('The password field is required.');
+                ->pause(200)
+                ->assertSee('The password field is required.')->pause(200);
         });
 
         $this->browse(function (Browser $browser) {
@@ -49,8 +49,8 @@ class RegisterTest extends DuskTestCase
                 ->visit(RegisterPage::REGISTER_URL)
                 ->type('password', RegisterPage::USER_PASS)
                 ->press('Register')
-                ->pause(100)
-                ->assertSee('The email field is required.');
+                ->pause(200)
+                ->assertSee('The email field is required.')->pause(200);
         });
 
         $this->browse(function (Browser $browser) {
@@ -59,8 +59,8 @@ class RegisterTest extends DuskTestCase
                 ->type('email', RegisterPage::WRONG_USER_EMAIL)
                 ->type('password', RegisterPage::WRONG_USER_PASS)
                 ->press('Register')
-                ->pause(100)
-                ->assertSee('The name field is required.');
+                ->pause(200)
+                ->assertSee('The name field is required.')->pause(200);
         });
 
 
@@ -84,7 +84,7 @@ class RegisterTest extends DuskTestCase
                 ->waitForLocation(RegisterPage::HOME_URL)
                 ->assertUrlIs(RegisterPage::homeUrl())
                 ->assertSee(RegisterPage::HOME_ASSERT_STRING_1)
-                ->assertSee(RegisterPage::HOME_ASSERT_STRING_2);
+                ->assertSee(RegisterPage::HOME_ASSERT_STRING_2)->pause(500);
         });
     }
 }
