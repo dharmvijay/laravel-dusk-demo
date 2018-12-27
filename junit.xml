@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Browser Test Suite" tests="6" assertions="19" errors="1" failures="0" skipped="0" time="43.358669">
-    <testsuite name="Tests\Browser\InstallationTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\InstallationTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="4.126361">
-      <testcase name="testLaravelInstallation" class="Tests\Browser\InstallationTest" classname="Tests.Browser.InstallationTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\InstallationTest.php" line="19" assertions="1" time="4.126361"/>
+  <testsuite name="Browser Test Suite" tests="6" assertions="19" errors="1" failures="0" skipped="0" time="38.691385">
+    <testsuite name="Tests\Browser\InstallationTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\InstallationTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="4.959146">
+      <testcase name="testLaravelInstallation" class="Tests\Browser\InstallationTest" classname="Tests.Browser.InstallationTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\InstallationTest.php" line="19" assertions="1" time="4.959146"/>
     </testsuite>
-    <testsuite name="Tests\Browser\LoginTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\LoginTest.php" tests="2" assertions="8" errors="0" failures="0" skipped="0" time="12.603240">
-      <testcase name="testLoginValidation" class="Tests\Browser\LoginTest" classname="Tests.Browser.LoginTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\LoginTest.php" line="19" assertions="5" time="11.371215"/>
-      <testcase name="testLogin" class="Tests\Browser\LoginTest" classname="Tests.Browser.LoginTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\LoginTest.php" line="113" assertions="3" time="1.232025"/>
+    <testsuite name="Tests\Browser\LoginTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\LoginTest.php" tests="2" assertions="8" errors="0" failures="0" skipped="0" time="10.285160">
+      <testcase name="testLoginValidation" class="Tests\Browser\LoginTest" classname="Tests.Browser.LoginTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\LoginTest.php" line="19" assertions="5" time="8.911543"/>
+      <testcase name="testLogin" class="Tests\Browser\LoginTest" classname="Tests.Browser.LoginTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\LoginTest.php" line="124" assertions="3" time="1.373617"/>
     </testsuite>
-    <testsuite name="Tests\Browser\LogoutTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\LogoutTest.php" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="7.024660">
-      <testcase name="testLogout" class="Tests\Browser\LogoutTest" classname="Tests.Browser.LogoutTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\LogoutTest.php" line="16" assertions="3" time="7.024660"/>
+    <testsuite name="Tests\Browser\LogoutTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\LogoutTest.php" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="6.211979">
+      <testcase name="testLogout" class="Tests\Browser\LogoutTest" classname="Tests.Browser.LogoutTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\LogoutTest.php" line="16" assertions="3" time="6.211979"/>
     </testsuite>
-    <testsuite name="Tests\Browser\RegisterTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\RegisterTest.php" tests="2" assertions="7" errors="1" failures="0" skipped="0" time="19.604408">
-      <testcase name="testRegisterUserValidation" class="Tests\Browser\RegisterTest" classname="Tests.Browser.RegisterTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\RegisterTest.php" line="19" assertions="7" time="13.177659"/>
-      <testcase name="testRegister" class="Tests\Browser\RegisterTest" classname="Tests.Browser.RegisterTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\RegisterTest.php" line="76" assertions="0" time="6.426749">
+    <testsuite name="Tests\Browser\RegisterTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\RegisterTest.php" tests="2" assertions="7" errors="1" failures="0" skipped="0" time="17.235100">
+      <testcase name="testRegisterUserValidation" class="Tests\Browser\RegisterTest" classname="Tests.Browser.RegisterTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\RegisterTest.php" line="19" assertions="7" time="10.748458"/>
+      <testcase name="testRegister" class="Tests\Browser\RegisterTest" classname="Tests.Browser.RegisterTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\RegisterTest.php" line="76" assertions="0" time="6.486642">
         <error type="Facebook\WebDriver\Exception\TimeOutException">Tests\Browser\RegisterTest::testRegister
 Facebook\WebDriver\Exception\TimeOutException: Waited 5 seconds for location [/home].
 
