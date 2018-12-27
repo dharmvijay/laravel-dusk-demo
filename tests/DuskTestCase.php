@@ -2,6 +2,7 @@
 
 namespace Tests;
 
+use Illuminate\Support\Facades\Log;
 use Laravel\Dusk\TestCase as BaseTestCase;
 use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
@@ -40,5 +41,18 @@ abstract class DuskTestCase extends BaseTestCase
                 ChromeOptions::CAPABILITY, $options
             )
         );
+    }
+
+    public function exceptionLogging(\Exception $ex)
+    {
+        $message = json_encode([
+            'Code' => $ex->getCode(),
+            'Message' => $ex->getMessage(),
+            'File' => $ex->getFile(),
+            'Line' => $ex->getLine()
+        ]);
+
+        Log::debug($message);
+
     }
 }

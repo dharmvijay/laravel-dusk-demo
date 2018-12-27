@@ -2,6 +2,8 @@
 
 namespace Tests\Browser;
 
+use Illuminate\Support\Facades\Log;
+use PHPUnit\Framework\ExpectationFailedException;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Tests\Browser\Pages\RegisterPage;
@@ -73,18 +75,26 @@ class RegisterTest extends DuskTestCase
      */
     public function testRegister()
     {
-        $this->browse(function (Browser $browser) {
-            $browser
-                ->visit(RegisterPage::REGISTER_URL)
-                ->type('name', RegisterPage::USER_NAME)
-                ->type('email', RegisterPage::USER_EMAIL)
-                ->type('password', RegisterPage::USER_PASS)
-                ->type('password_confirmation', RegisterPage::USER_PASS)
-                ->press('Register')
-                ->waitForLocation(RegisterPage::HOME_URL)
-                ->assertUrlIs(RegisterPage::homeUrl())
-                ->assertSee(RegisterPage::HOME_ASSERT_STRING_1)
-                ->assertSee(RegisterPage::HOME_ASSERT_STRING_2)->pause(500);
-        });
+        try{
+            $this->browse(function (Browser $browser) {
+                $browser
+                    ->visit(RegisterPage::REGISTER_URL)
+                    ->type('name', RegisterPage::USER_NAME)
+                    ->type('email', RegisterPage::USER_EMAIL)
+                    ->type('password', RegisterPage::USER_PASS)
+                    ->type('password_confirmation', RegisterPage::USER_PASS)
+                    ->press('Register')
+                    ->waitForLocation(RegisterPage::HOME_URL)
+                    ->assertUrlIs(RegisterPage::homeUrl())
+                    ->assertSee(RegisterPage::HOME_ASSERT_STRING_1)
+                    ->assertSee(RegisterPage::HOME_ASSERT_STRING_2)->pause(500);
+            });
+        } catch (ExpectationFailedException $ex){
+            throw $ex;
+        } catch (\Exception $ex) {
+            throw $ex;
+        }
+
+
     }
 }
