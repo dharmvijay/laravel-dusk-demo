@@ -13,7 +13,7 @@ use PHPUnit\Framework\ExpectationFailedException;
 class LoginPage extends Page
 {
     const LOGIN_URL = '/login';
-    const USER_EMAIL = 'dharmvijay.patel@multidots.com';
+    const USER_EMAIL = 'dharmvijay.patel@gmail.com';
     const USER_PASS = '123456';
     const WRONG_USER_EMAIL = 'dvpatel@gmail.com';
     const WRONG_USER_PASS = '123456';
@@ -64,6 +64,11 @@ class LoginPage extends Page
         ];
     }
 
+    /**
+     * assert logout method
+     * @param Browser $browser
+     * @throws \Facebook\WebDriver\Exception\TimeOutException
+     */
     public static function assertLogout(Browser $browser)
     {
         $browser->visit(LoginPage::LOGIN_URL);
@@ -95,6 +100,10 @@ class LoginPage extends Page
 
     }
 
+    /**
+     * assert full login form
+     * @param Browser $browser
+     */
     public static function assertFullFormValidation(Browser $browser)
     {
         $browser->visit(LoginPage::LOGIN_URL);
@@ -110,6 +119,10 @@ class LoginPage extends Page
         Log::info('[testLoginFormValidation]: Field Validations executed successfully.');
     }
 
+    /**
+     * assert password validation
+     * @param Browser $browser
+     */
     public static function assertPassValidation(Browser $browser)
     {
         $browser->visit(LoginPage::LOGIN_URL);
@@ -128,6 +141,10 @@ class LoginPage extends Page
 
     }
 
+    /**
+     * assert email validation
+     * @param Browser $browser
+     */
     public static function assertEmailValidation(Browser $browser)
     {
         $browser->visit(LoginPage::LOGIN_URL);
@@ -145,6 +162,10 @@ class LoginPage extends Page
         Log::info('[testLoginFormValidation]: Email Field validation test executed successfully.');
     }
 
+    /**
+     * assert invalid data
+     * @param Browser $browser
+     */
     public static function assertInValidDataValidation(Browser $browser)
     {
         $browser->visit(LoginPage::LOGIN_URL);
@@ -164,6 +185,11 @@ class LoginPage extends Page
 
     }
 
+    /**
+     * assert login
+     * @param Browser $browser
+     * @throws \Facebook\WebDriver\Exception\TimeOutException
+     */
     public static function assertLogin(Browser $browser)
     {
         $browser->visit(LoginPage::LOGIN_URL);
