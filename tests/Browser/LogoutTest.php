@@ -18,7 +18,7 @@ class LogoutTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             try{
-                LoginPage::assertLogout($browser);
+                LoginPage::assertLogout($browser); // Check logout feature
             } catch (ExpectationFailedException $ex){
                 $this->exceptionLogging($ex);
                 throw $ex;

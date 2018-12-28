@@ -18,7 +18,7 @@ class LoginTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             try{
-                LoginPage::assertFullFormValidation($browser);
+                LoginPage::assertFullFormValidation($browser); // Assert to check full login form validation
             } catch (ExpectationFailedException $ex){
                 $this->exceptionLogging($ex);
                 throw $ex;
@@ -31,7 +31,7 @@ class LoginTest extends DuskTestCase
 
         $this->browse(function (Browser $browser) {
             try{
-                LoginPage::assertPassValidation($browser);
+                LoginPage::assertPassValidation($browser); // Assert to check password field validation
             } catch (ExpectationFailedException $ex){
                 $this->exceptionLogging($ex);
                 throw $ex;
@@ -43,7 +43,7 @@ class LoginTest extends DuskTestCase
 
         $this->browse(function (Browser $browser) {
             try{
-                LoginPage::assertEmailValidation($browser);
+                LoginPage::assertEmailValidation($browser); // Assert to check email field validation
             } catch (ExpectationFailedException $ex){
                 $this->exceptionLogging($ex);
                 throw $ex;
@@ -55,7 +55,7 @@ class LoginTest extends DuskTestCase
 
         $this->browse(function (Browser $browser) {
             try{
-                LoginPage::assertInValidDataValidation($browser);
+                LoginPage::assertInValidDataValidation($browser); // Assert to check wrong credentials validation
             } catch (ExpectationFailedException $ex){
                 $this->exceptionLogging($ex);
                 throw $ex;

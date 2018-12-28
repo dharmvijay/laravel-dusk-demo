@@ -21,7 +21,7 @@ class RegisterTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             try{
-                RegisterPage::assertFullFormValidation($browser);
+                RegisterPage::assertFullFormValidation($browser); // Assert to check full registration form validation
             } catch (ExpectationFailedException $ex){
                 $this->exceptionLogging($ex);
                 throw $ex;
@@ -33,7 +33,7 @@ class RegisterTest extends DuskTestCase
 
         $this->browse(function (Browser $browser) {
             try{
-                RegisterPage::assertPasswordValidation($browser);
+                RegisterPage::assertPasswordValidation($browser); // Assert to check password field validation
             } catch (ExpectationFailedException $ex){
                 $this->exceptionLogging($ex);
                 throw $ex;
@@ -45,7 +45,7 @@ class RegisterTest extends DuskTestCase
 
         $this->browse(function (Browser $browser) {
             try{
-                RegisterPage::assertNameValidation($browser);
+                RegisterPage::assertNameValidation($browser); // Assert to check name field validation
             } catch (ExpectationFailedException $ex){
                 $this->exceptionLogging($ex);
                 throw $ex;
@@ -57,7 +57,7 @@ class RegisterTest extends DuskTestCase
 
         $this->browse(function (Browser $browser) {
             try{
-                RegisterPage::assertEmailValidation($browser);
+                RegisterPage::assertEmailValidation($browser); // Assert to check email field validation
             } catch (ExpectationFailedException $ex){
                 $this->exceptionLogging($ex);
                 throw $ex;
@@ -77,8 +77,7 @@ class RegisterTest extends DuskTestCase
         $this->browse(function (Browser $browser) {
 
             try{
-                RegisterPage::assertRegister($browser);
-
+                RegisterPage::assertRegister($browser); // Assert to check registration feature
             } catch (ExpectationFailedException $ex){
                 $this->exceptionLogging($ex);
                 throw $ex;
