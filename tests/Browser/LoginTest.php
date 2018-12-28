@@ -2,7 +2,6 @@
 
 namespace Tests\Browser;
 
-use Illuminate\Support\Facades\Log;
 use PHPUnit\Framework\ExpectationFailedException;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;

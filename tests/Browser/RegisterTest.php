@@ -66,8 +66,6 @@ class RegisterTest extends DuskTestCase
                 throw $ex;
             }
         });
-        Log::info('[testRegister]: Validate Registration test cases executed successfully.');
-
     }
 
     /**
