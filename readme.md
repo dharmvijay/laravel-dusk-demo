@@ -30,7 +30,7 @@ If you had test failures the last time you ran the dusk command, you may save ti
 
 ``php artisan dusk:fails``
 
-## Few Dusk commands
+## Few More Dusk commands
 
 `php artisan dusk C:/wamp64/www/laravel-dusk-demo/tests/Browser/InstallationTest.php`
 
