@@ -38,3 +38,20 @@ If you had test failures the last time you ran the dusk command, you may save ti
 
 `php artisan dusk --log-junit junit.xml`
 
+## Install laravel dusk dashboard
+
+`composer require beyondcode/dusk-dashboard`
+
+Next up, you need to go to your `DuskTestCase.php` that was installed by Laravel Dusk. You can find this file in your tests directory:
+
+Find and replace this line:
+
+`use Laravel\Dusk\TestCase as BaseTestCase;`
+
+with:
+
+`use BeyondCode\DuskDashboard\Testing\TestCase as BaseTestCase;`
+
+Usage
+
+`php artisan dusk:dashboard`
