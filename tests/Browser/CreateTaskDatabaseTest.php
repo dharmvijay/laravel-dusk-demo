@@ -1,66 +1,20 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+<?php
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+namespace Tests\Browser;
 
-## About Laravel Dusk
+use App\Task;
+use App\User;
+use Illuminate\Support\Facades\Log;
+use PHPUnit\Framework\ExpectationFailedException;
+use Tests\Browser\Pages\CreateTaskPage;
+use Tests\Browser\Pages\RegisterPage;
+use Tests\DuskTestCase;
+use Laravel\Dusk\Browser;
+use Exception;
 
-Laravel is a automation testing package prvided with laravel framwork.
+class CreateTaskDatabaseTest extends DuskTestCase
+{
 
-## Installation steps
-
-To get started, you should add the laravel/dusk Composer dependency to your project:
-
-``composer require --dev laravel/dusk``
-If you are manually registering Dusk's service provider, you should never register it in your production environment, as doing so could lead to arbitrary users being able to authenticate with your application.
-
-After installing the Dusk package, run the dusk:install Artisan command:
-
-``php artisan dusk:install``
-A Browser directory will be created within your tests directory and will contain an example test. Next, set the *APP_URL* environment variable in your .env file. This value should match the URL you use to access your application in a browser.
-
-To run your tests, use the dusk Artisan command. The dusk command accepts any argument that is also accepted by the phpunit command:
-
-``php artisan dusk``
-If you had test failures the last time you ran the dusk command, you may save time by re-running the failing tests first using the dusk:fails command:
-
-``php artisan dusk:fails``
-
-## Few More Dusk commands
-
-`php artisan dusk C:/wamp64/www/laravel-dusk-demo/tests/Browser/InstallationTest.php`
-
-`php artisan dusk`
-
-`php artisan dusk --log-junit junit.xml`
-
-` php artisan dusk tests/Browser/CreateTaskDatabaseTest.php`
-
-## Install laravel dusk dashboard
-
-`composer require beyondcode/dusk-dashboard`
-
-Next up, you need to go to your `DuskTestCase.php` that was installed by Laravel Dusk. You can find this file in your tests directory:
-
-Find and replace this line:
-
-`use Laravel\Dusk\TestCase as BaseTestCase;`
-
-with:
-
-`use BeyondCode\DuskDashboard\Testing\TestCase as BaseTestCase;`
-
-Usage
-
-`php artisan dusk:dashboard`
-
-
-## Test example for database driven application
-```
     /**
      * A basic browser test example.
      * This test is specially made for your database driven application
@@ -97,11 +51,7 @@ Usage
             'description' => $taskMake->description
         ]);
     }
-```
 
-## Test example for Api driven application
-
-```
     /**
      * A basic browser test example.
      * This test is specially made for your API driven application
@@ -155,6 +105,5 @@ Usage
         });
 
     }
-```
 
-
+}

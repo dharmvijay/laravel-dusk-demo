@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/create-task', 'HomeController@showCreateTaskForm')->name('create-task');
+Route::post('/store-task', 'HomeController@storeTask')->name('store-task');
+Route::get('/list-task', 'HomeController@listTask')->name('list-task');
