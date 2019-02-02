@@ -23,7 +23,7 @@ script:
   - php artisan dusk
 
 before_install:
-  - mysql -e 'CREATE DATABASE laravel-dusk-demo;'
+  - mysql -e 'CREATE DATABASE dusk;'
 
 services:
   - mysql
