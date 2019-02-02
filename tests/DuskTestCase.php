@@ -3,8 +3,8 @@
 namespace Tests;
 
 use Illuminate\Support\Facades\Log;
-//use BeyondCode\DuskDashboard\Testing\TestCase as BaseTestCase;
-use Laravel\Dusk\TestCase as BaseTestCase;
+use BeyondCode\DuskDashboard\Testing\TestCase as BaseTestCase;
+//use Laravel\Dusk\TestCase as BaseTestCase;
 use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
@@ -21,7 +21,7 @@ abstract class DuskTestCase extends BaseTestCase
      */
     public static function prepare()
     {
-//        static::startChromeDriver();
+        static::startChromeDriver();
     }
 
     /**
@@ -29,27 +29,27 @@ abstract class DuskTestCase extends BaseTestCase
      *
      * @return \Facebook\WebDriver\Remote\RemoteWebDriver
      */
-//    protected function driver()
-//    {
-//        $options = (new ChromeOptions)->addArguments([
-//            '--disable-gpu',
-//            '--headless',
-//            '--window-size=1920,1080',
-//        ]);
-//
-//        return RemoteWebDriver::create(
-//            'http://localhost:9515', DesiredCapabilities::chrome()->setCapability(
-//                ChromeOptions::CAPABILITY, $options
-//            )
-//        );
-//    }
-
     protected function driver()
     {
+        $options = (new ChromeOptions)->addArguments([
+            '--disable-gpu',
+            '--headless',
+            '--window-size=1920,1080',
+        ]);
+
         return RemoteWebDriver::create(
-            'http://localhost:9515', DesiredCapabilities::phantomjs()
+            'http://localhost:9515', DesiredCapabilities::chrome()->setCapability(
+                ChromeOptions::CAPABILITY, $options
+            )
         );
     }
+
+//    protected function driver()
+//    {
+//        return RemoteWebDriver::create(
+//            'http://localhost:9515', DesiredCapabilities::phantomjs()
+//        );
+//    }
 
 
     public function exceptionLogging(\Exception $ex)
