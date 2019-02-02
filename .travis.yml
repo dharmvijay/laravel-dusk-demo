@@ -1,0 +1,32 @@
+language: php
+
+php:
+  - 7.1
+  - 7.2
+  - 7.3
+
+addons:
+  chrome: stable
+
+install:
+  - cp .env.example .env
+  - composer self-update
+  - travis_retry composer install --no-interaction --prefer-dist --no-suggest
+  - php artisan key:generate
+  - php artisan migrate
+
+before_script:
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  - php artisan serve &
+
+script:
+  - php artisan dusk
+
+before_install:
+  - mysql -e 'CREATE DATABASE laravel-dusk-demo;'
+
+services:
+  - mysql
+
+notifications:
+  email: false
