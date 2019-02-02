@@ -14,6 +14,7 @@ install:
   - travis_retry composer install --no-interaction --prefer-dist --no-suggest
   - php artisan key:generate
   - php artisan migrate
+  - php artisan db:seed
 
 before_script:
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
@@ -30,3 +31,11 @@ services:
 
 notifications:
   email: false
+
+branches:
+  except:
+  - dusk-dashboard
+
+branches:
+  only:
+  - master
