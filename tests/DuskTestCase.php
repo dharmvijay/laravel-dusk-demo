@@ -3,8 +3,7 @@
 namespace Tests;
 
 use Illuminate\Support\Facades\Log;
-//use BeyondCode\DuskDashboard\Testing\TestCase as BaseTestCase;
-use Laravel\Dusk\TestCase as BaseTestCase;
+use BeyondCode\DuskDashboard\Testing\TestCase as BaseTestCase;
 use Facebook\WebDriver\Chrome\ChromeOptions;
 use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\Remote\DesiredCapabilities;
@@ -33,7 +32,7 @@ abstract class DuskTestCase extends BaseTestCase
     {
         $options = (new ChromeOptions)->addArguments([
             '--disable-gpu',
-            '--headless',
+            //'--headless',
             '--window-size=1920,1080',
         ]);
 
@@ -43,18 +42,6 @@ abstract class DuskTestCase extends BaseTestCase
             )
         );
     }
-
-    /**
-     * Create the RemoteWebDriver instance.
-     *
-     * @return \Facebook\WebDriver\Remote\RemoteWebDriver
-     */
-//    protected function driver()
-//    {
-//        return RemoteWebDriver::create(
-//            'http://localhost:4444/wd/hub', DesiredCapabilities::phantomjs()
-//        );
-//    }
 
     public function exceptionLogging(\Exception $ex)
     {
