@@ -12,8 +12,7 @@
         "beyondcode/dusk-dashboard": "^1.0",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
-        "laravel/tinker": "^1.0",
-        "proengsoft/laravel-jsvalidation": ">2.2.0"
+        "laravel/tinker": "^1.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
