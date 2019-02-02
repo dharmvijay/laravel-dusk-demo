@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Task;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class TaskApiController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -14,7 +14,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
     }
 
     /**
@@ -55,7 +54,6 @@ class HomeController extends Controller
      */
     public function storeTaskApi(Request $request)
     {
-        echo 1; exit();
         return Task::create($request->all());
     }
 
