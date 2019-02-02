@@ -13,9 +13,9 @@ use PHPUnit\Framework\ExpectationFailedException;
 class LoginPage extends Page
 {
     const LOGIN_URL = '/login';
-    const USER_EMAIL = 'dharmvijay.patel@gmail.com';
+    const USER_EMAIL = 'laravel-dusk.demo@gmail.com';
     const USER_PASS = '123456';
-    const WRONG_USER_EMAIL = 'dvpatel@gmail.com';
+    const WRONG_USER_EMAIL = 'jhon@gmail.com';
     const WRONG_USER_PASS = '123456';
     const HOME_URL = '/home';
     const HOME_ASSERT_STRING_1 = 'Dashboard';
@@ -92,7 +92,7 @@ class LoginPage extends Page
         Log::info('[testLogout]: Assert current url is home page url and other content.');
 
         $browser->click('#navbarDropdown');
-        $browser->click('a.dropdown-item')->pause(200);
+        $browser->click('a.dropdown-item')->pause(2000);
         Log::info('[testLogout]: Hit logout link.');
 
         $browser->assertSee('Laravel');
@@ -112,9 +112,9 @@ class LoginPage extends Page
         $browser->press('Login');
         Log::info('[testLoginFormValidation]: Hit login button without entering any value to test client side validations.');
 
-        $browser->pause(200);
+        $browser->pause(2000);
         $browser->assertSee('The email field is required.');
-        $browser->assertSee('The password field is required.')->pause(200);
+        $browser->assertSee('The password field is required.')->pause(2000);
         Log::info('[testLoginFormValidation]: Validation message assertions seems fine.');
         Log::info('[testLoginFormValidation]: Field Validations executed successfully.');
     }
@@ -134,8 +134,8 @@ class LoginPage extends Page
         $browser->press('Login');
         Log::info('[testLoginFormValidation]: Hit login button to check password required validation.');
 
-        $browser->pause(200);
-        $browser->assertSee('The password field is required.')->pause(200);
+        $browser->pause(2000);
+        $browser->assertSee('The password field is required.')->pause(2000);
         Log::info('[testLoginFormValidation]: Validation message assertions seems fine.');
         Log::info('[testLoginFormValidation]: Password Field validation test executed successfully.');
 
@@ -156,8 +156,8 @@ class LoginPage extends Page
         $browser->press('Login');
         Log::info('[testLoginFormValidation]: Hit login button to check email required validation.');
 
-        $browser->pause(200);
-        $browser->assertSee('The email field is required.')->pause(200);
+        $browser->pause(2000);
+        $browser->assertSee('The email field is required.')->pause(2000);
         Log::info('[testLoginFormValidation]: Validation message assertions seems fine.');
         Log::info('[testLoginFormValidation]: Email Field validation test executed successfully.');
     }
@@ -178,8 +178,8 @@ class LoginPage extends Page
         $browser->press('Login');
         Log::info('[testLoginFormValidation]: Hit login button to authenticate.');
 
-        $browser->pause(200);
-        $browser->assertSee('These credentials do not match our records.')->pause(200);
+        $browser->pause(2000);
+        $browser->assertSee('These credentials do not match our records.')->pause(2000);
         Log::info('[testLoginFormValidation]: Validation message assertions seems fine.');
         Log::info('[testLoginFormValidation]: Enter wrong values validation test executed successfully.');
 
@@ -207,7 +207,7 @@ class LoginPage extends Page
 
         $browser->assertUrlIs(LoginPage::homeUrl());
         $browser->assertSee(LoginPage::HOME_ASSERT_STRING_1);
-        $browser->assertSee(LoginPage::HOME_ASSERT_STRING_2)->pause(200);
+        $browser->assertSee(LoginPage::HOME_ASSERT_STRING_2)->pause(2000);
         Log::info('[testLogin]: Login assertions seems fine.');
         Log::info('[testLogin]: Enter wrong values validation test executed successfully.');
     }

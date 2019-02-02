@@ -1,30 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Browser Test Suite" tests="6" assertions="19" errors="1" failures="0" skipped="0" time="38.691385">
-    <testsuite name="Tests\Browser\InstallationTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\InstallationTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="4.959146">
-      <testcase name="testLaravelInstallation" class="Tests\Browser\InstallationTest" classname="Tests.Browser.InstallationTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\InstallationTest.php" line="19" assertions="1" time="4.959146"/>
+  <testsuite name="Browser Test Suite" tests="7" assertions="23" errors="0" failures="0" skipped="0" time="74.294593">
+    <testsuite name="Tests\Browser\ExampleTest" file="/Users/MD163-ANISH/anish/sites_flywheel/dusk1/app/tests/Browser/ExampleTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="3.675562">
+      <testcase name="testBasicExample" class="Tests\Browser\ExampleTest" classname="Tests.Browser.ExampleTest" file="/Users/MD163-ANISH/anish/sites_flywheel/dusk1/app/tests/Browser/ExampleTest.php" line="16" assertions="1" time="3.675562"/>
     </testsuite>
-    <testsuite name="Tests\Browser\LoginTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\LoginTest.php" tests="2" assertions="8" errors="0" failures="0" skipped="0" time="10.285160">
-      <testcase name="testLoginValidation" class="Tests\Browser\LoginTest" classname="Tests.Browser.LoginTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\LoginTest.php" line="19" assertions="5" time="8.911543"/>
-      <testcase name="testLogin" class="Tests\Browser\LoginTest" classname="Tests.Browser.LoginTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\LoginTest.php" line="124" assertions="3" time="1.373617"/>
+    <testsuite name="Tests\Browser\InstallationTest" file="/Users/MD163-ANISH/anish/sites_flywheel/dusk1/app/tests/Browser/InstallationTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="2.528811">
+      <testcase name="testLaravelInstallation" class="Tests\Browser\InstallationTest" classname="Tests.Browser.InstallationTest" file="/Users/MD163-ANISH/anish/sites_flywheel/dusk1/app/tests/Browser/InstallationTest.php" line="19" assertions="1" time="2.528811"/>
     </testsuite>
-    <testsuite name="Tests\Browser\LogoutTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\LogoutTest.php" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="6.211979">
-      <testcase name="testLogout" class="Tests\Browser\LogoutTest" classname="Tests.Browser.LogoutTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\LogoutTest.php" line="16" assertions="3" time="6.211979"/>
+    <testsuite name="Tests\Browser\LoginTest" file="/Users/MD163-ANISH/anish/sites_flywheel/dusk1/app/tests/Browser/LoginTest.php" tests="2" assertions="8" errors="0" failures="0" skipped="0" time="28.432673">
+      <testcase name="testLoginFormValidation" class="Tests\Browser\LoginTest" classname="Tests.Browser.LoginTest" file="/Users/MD163-ANISH/anish/sites_flywheel/dusk1/app/tests/Browser/LoginTest.php" line="17" assertions="5" time="24.282293"/>
+      <testcase name="testLogin" class="Tests\Browser\LoginTest" classname="Tests.Browser.LoginTest" file="/Users/MD163-ANISH/anish/sites_flywheel/dusk1/app/tests/Browser/LoginTest.php" line="74" assertions="3" time="4.150380"/>
     </testsuite>
-    <testsuite name="Tests\Browser\RegisterTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\RegisterTest.php" tests="2" assertions="7" errors="1" failures="0" skipped="0" time="17.235100">
-      <testcase name="testRegisterUserValidation" class="Tests\Browser\RegisterTest" classname="Tests.Browser.RegisterTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\RegisterTest.php" line="19" assertions="7" time="10.748458"/>
-      <testcase name="testRegister" class="Tests\Browser\RegisterTest" classname="Tests.Browser.RegisterTest" file="C:\wamp64\www\laravel-dusk-demo\tests\Browser\RegisterTest.php" line="76" assertions="0" time="6.486642">
-        <error type="Facebook\WebDriver\Exception\TimeOutException">Tests\Browser\RegisterTest::testRegister
-Facebook\WebDriver\Exception\TimeOutException: Waited 5 seconds for location [/home].
-
-C:\wamp64\www\laravel-dusk-demo\vendor\laravel\dusk\src\Concerns\WaitsForElements.php:227
-C:\wamp64\www\laravel-dusk-demo\vendor\laravel\dusk\src\Concerns\WaitsForElements.php:156
-C:\wamp64\www\laravel-dusk-demo\vendor\laravel\dusk\src\Concerns\WaitsForElements.php:118
-C:\wamp64\www\laravel-dusk-demo\tests\Browser\RegisterTest.php:87
-C:\wamp64\www\laravel-dusk-demo\vendor\laravel\dusk\src\Concerns\ProvidesBrowser.php:67
-C:\wamp64\www\laravel-dusk-demo\tests\Browser\RegisterTest.php:91
-</error>
-      </testcase>
+    <testsuite name="Tests\Browser\LogoutTest" file="/Users/MD163-ANISH/anish/sites_flywheel/dusk1/app/tests/Browser/LogoutTest.php" tests="1" assertions="4" errors="0" failures="0" skipped="0" time="7.704843">
+      <testcase name="testLogout" class="Tests\Browser\LogoutTest" classname="Tests.Browser.LogoutTest" file="/Users/MD163-ANISH/anish/sites_flywheel/dusk1/app/tests/Browser/LogoutTest.php" line="17" assertions="4" time="7.704843"/>
+    </testsuite>
+    <testsuite name="Tests\Browser\RegisterTest" file="/Users/MD163-ANISH/anish/sites_flywheel/dusk1/app/tests/Browser/RegisterTest.php" tests="2" assertions="9" errors="0" failures="0" skipped="0" time="31.952704">
+      <testcase name="testRegisterUserFormValidation" class="Tests\Browser\RegisterTest" classname="Tests.Browser.RegisterTest" file="/Users/MD163-ANISH/anish/sites_flywheel/dusk1/app/tests/Browser/RegisterTest.php" line="20" assertions="6" time="24.409011"/>
+      <testcase name="testRegister" class="Tests\Browser\RegisterTest" classname="Tests.Browser.RegisterTest" file="/Users/MD163-ANISH/anish/sites_flywheel/dusk1/app/tests/Browser/RegisterTest.php" line="75" assertions="3" time="7.543693"/>
     </testsuite>
   </testsuite>
 </testsuites>

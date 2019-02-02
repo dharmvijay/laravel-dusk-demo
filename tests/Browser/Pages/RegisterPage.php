@@ -13,7 +13,7 @@ class RegisterPage extends Page
 {
     const REGISTER_URL = '/register';
     const USER_NAME = 'harish patel';
-    const USER_EMAIL = 'harish.patel@multidots.com';
+    const USER_EMAIL = 'laravel-dusk.demo@gmail.com';
     const USER_PASS = '123456';
     const WRONG_USER_ = 'hrspatel@gmail.com';
     const WRONG_USER_EMAIL = 'hrspatel@gmail.com';
@@ -77,10 +77,10 @@ class RegisterPage extends Page
         $browser->press('Register');
         Log::info('[testRegisterUserFormValidation]: Hit register button to authenticate.');
 
-        $browser->pause(200);
+        $browser->pause(2000);
         $browser->assertSee('The name field is required.');
         $browser->assertSee('The email field is required.');
-        $browser->assertSee('The password field is required.')->pause(200);
+        $browser->assertSee('The password field is required.')->pause(2000);
         Log::info('[testRegisterUserFormValidation]: Validation message assertions seems fine.');
         Log::info('[testRegisterUserFormValidation]: Field Validations executed successfully.');
     }
@@ -101,8 +101,8 @@ class RegisterPage extends Page
         $browser->press('Register');
         Log::info('[testRegisterUserFormValidation]: Hit register button to authenticate.');
 
-        $browser->pause(200);
-        $browser->assertSee('The password field is required.')->pause(200);
+        $browser->pause(2000);
+        $browser->assertSee('The password field is required.')->pause(2000);
         Log::info('[testRegisterUserFormValidation]: Register form validation assertions seems fine.');
     }
 
@@ -119,8 +119,8 @@ class RegisterPage extends Page
         $browser->press('Register');
         Log::info('[testRegisterUserFormValidation]: Hit register button to authenticate.');
 
-        $browser->pause(200);
-        $browser->assertSee('The name field is required.')->pause(200);
+        $browser->pause(2000);
+        $browser->assertSee('The name field is required.')->pause(2000);
         Log::info('[testRegisterUserFormValidation]: Register form validation assertions seems fine.');
     }
 
@@ -137,8 +137,8 @@ class RegisterPage extends Page
         $browser->press('Register');
         Log::info('[testRegisterUserFormValidation]: Hit register button to authenticate.');
 
-        $browser->pause(200);
-        $browser->assertSee('The email field is required.')->pause(200);
+        $browser->pause(2000);
+        $browser->assertSee('The email field is required.')->pause(2000);
         Log::info('[testRegisterUserFormValidation]: Register form validation assertions seems fine.');
     }
 
@@ -166,7 +166,7 @@ class RegisterPage extends Page
 
         $browser->assertUrlIs(RegisterPage::homeUrl());
         $browser->assertSee(RegisterPage::HOME_ASSERT_STRING_1);
-        $browser->assertSee(RegisterPage::HOME_ASSERT_STRING_2)->pause(500);
+        $browser->assertSee(RegisterPage::HOME_ASSERT_STRING_2)->pause(5000);
         Log::info('[testRegister]: Registration assertions seems fine.');
         Log::info('[testRegister]: Registration test cases executed successfully.');
 
